@@ -1,49 +1,8 @@
-# Springboot 学习笔记
-
-Modules 介绍
-
-Springboot-Devtools：Springboot 集成热部署
-
-Springboot-Cache：Springboot 集成缓存技术
-
-## Springboot-Devtools
-
-pom.xml 设置
-
-```xml
-<!-- 在 pom.xml 添加依赖 -->
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-devtools</artifactId>
-</dependency>
-
-<!--配置插件-->
-<plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <configuration>
-        <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
-    </configuration>
-</plugin>
-```
-
-在 IDEA 中设置
-
-File——>Setting——>Compiler——>勾选Build project automatically
-
-![01](Springboot学习笔记/01.png)
-
-按下 Ctrl + Shift + A，搜索 registry——>勾选 compiler.automake.allow.when.app.running 即可实现
-
-![02](Springboot学习笔记/02.png)
-
-![03](Springboot学习笔记/03.png)
-
-## Springboot集成缓存技术
+# Springboot集成缓存技术
 
 Springboot 默认的 ConcurrentMapCacheManager 作为缓存技术
 
-### 缓存简单案例
+## 缓存简单案例
 
 在 pom.xml 添加依赖
 
@@ -119,11 +78,11 @@ public class CountryServiceImpl implements CountryService {
 
 > @Cacheable(value = "country") 缓存countryCommon数据到country中
 
-### 切换缓存
+## 切换缓存
 
 切换缓存技术除了移除相关依赖包及配置以外，使用方式和实例保持一致。
 
-#### Ehcache
+### Ehcache
 
 在 pom.xml 添加依赖
 
@@ -166,7 +125,7 @@ ehcache.xml
 </ehcache>
 ```
 
-#### Guava
+### Guava
 
 只需要在 pom.xml 添加 Guava 依赖即可，spirngboot自动配置 GuavaCacheManager 这个Bean
 
@@ -179,7 +138,7 @@ ehcache.xml
 </dependency>
 ```
 
-#### Redis
+### Redis
 
 只需要在 pom.xml 添加 redis 依赖即可，spirngboot自动配置 RedisCacheManager 这个Bean 以及 RedisTemplate 的 Bean
 
@@ -190,6 +149,4 @@ ehcache.xml
     <artifactId>spring-boot-starter-data-redis</artifactId>
 </dependency>
 ```
-
-
 
