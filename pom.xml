@@ -13,6 +13,7 @@
         <module>Springboot-Cache</module>
         <module>Springboot-NoSQL</module>
         <module>Springboot-JMS</module>
+        <module>Springboot-Learn</module>
     </modules>
 
     <parent>
