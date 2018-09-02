@@ -14,13 +14,22 @@ import org.springframework.jms.core.JmsTemplate;
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
-    @Autowired
-    JmsTemplate jmsTemplate;
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);
     }
 
+    /**
+     * 注入 springboot 为我们配置好的 JmsTemplate 的 Bean
+     */
+    @Autowired
+    JmsTemplate jmsTemplate;
+
+    /**
+     * 实现 CommandLineRunner 接口，
+     * 通过 JmsTemplate 的 send 方法向 my-destination 目的地发送 msg 消息
+     * @param args
+     * @throws Exception
+     */
     @Override
     public void run(String... args) throws Exception {
         jmsTemplate.send("my-destination", new Msg());
