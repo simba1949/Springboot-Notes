@@ -5,15 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.simba1949</groupId>
-    <artifactId>Springboot-Notes</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>Springboot-ActiveMQ</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>Springboot-Devtools</module>
-        <module>Springboot-Cache</module>
-        <module>Springboot-NoSQL</module>
-        <module>Springboot-JMS</module>
-    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -47,6 +40,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-activemq -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
         </dependency>
     </dependencies>
 
