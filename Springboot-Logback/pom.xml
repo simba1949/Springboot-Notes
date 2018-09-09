@@ -5,28 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.simba1949</groupId>
-    <artifactId>Springboot-Notes</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>Springboot-Logback</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>Springboot-Devtools</module>
-        <module>Springboot-Cache</module>
-        <module>Springboot-NoSQL</module>
-        <module>Springboot-JMS</module>
-        <module>Springboot-Learn</module>
-        <module>Springboot-Actuator</module>
-        <module>Springboot-Freemarker</module>
-        <module>Springboot-Lombok</module>
-        <module>Springboot-Quartz</module>
-        <module>Springboot-SpringTask</module>
-        <module>Springboot-Thymeleaf</module>
-        <module>Springboot-Email</module>
-        <module>Springboot-Logback</module>
-        <module>Springboot-MybatisPlus</module>
-        <module>Springboot-Redis-Jedis</module>
-        <module>Springboot-Shiro</module>
-        <module>Springboot-Swagger2</module>
-    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
